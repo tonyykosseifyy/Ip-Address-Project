@@ -1,16 +1,25 @@
 import React from 'react' ;
 import './Header.css' ;
-
-
+import backgroundImg from './pattern-bg.png' ;
+import styled from 'styled-components' ;
 
 const Header = () => {
   return (
-    <div className='header'>
+    <HeaderWrapper className='header' >
 
-    </div>
+    </HeaderWrapper>
   ) ;
 } ;
 
 
 
 export default Header ;
+
+
+
+
+
+const HeaderWrapper = styled.header`
+  background-image: url(${backgroundImg}) ;
+
+`
