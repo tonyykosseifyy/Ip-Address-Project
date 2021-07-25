@@ -2,8 +2,7 @@ import React from 'react' ;
 import './Header.css' ;
 import styled from 'styled-components' ;
 import logo from './pattern-bg.png' ;
-import { FaArrowRight } from 'react-icons/fa' ;
-
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
 const Header = () => {
   return (
@@ -14,7 +13,7 @@ const Header = () => {
       <HeaderForm>
         <Input />
         <FormButton>
-
+          <ArrowForwardIosIcon />
         </FormButton>
       </HeaderForm>
     </HeaderWrapper>
