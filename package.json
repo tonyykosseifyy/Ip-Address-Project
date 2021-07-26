@@ -3,11 +3,16 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
+<<<<<<< HEAD
     "@material-ui/core": "^4.12.2",
     "@material-ui/icons": "^4.11.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-icons": "^4.2.0",
+=======
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+>>>>>>> 6ccab4284b79432f3eda610b530e9762a3dd16c8
     "react-is": ">= 16.8.0",
     "styled-components": "^5.3.0"
   },
@@ -19,6 +24,7 @@
   },
   "devDependencies": {
     "react-scripts": "latest"
+<<<<<<< HEAD
   },
   "browserslist": {
     "production": [
@@ -33,3 +39,7 @@
     ]
   }
 }
+=======
+  }
+}
+>>>>>>> 6ccab4284b79432f3eda610b530e9762a3dd16c8

@@ -3,14 +3,12 @@ import './Header.css' ;
 import styled from 'styled-components' ;
 import logo from './pattern-bg.png' ;
 import { IoIosArrowForward } from 'react-icons/io';
-import Info from './Info' ;
 
 
 
 const Header = () => {
   return (
     <HeaderWrapper className='header' >
-      <Info />
       <HeaderTitle>
         IP Address Tracker
       </HeaderTitle>
