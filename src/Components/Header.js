@@ -2,7 +2,7 @@ import React from 'react' ;
 import './Header.css' ;
 import styled from 'styled-components' ;
 import logo from './pattern-bg.png' ;
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import { IoIosArrowForward } from 'react-icons/io';
 import Info from './Info' ;
 
 
@@ -14,10 +14,10 @@ const Header = () => {
       <HeaderTitle>
         IP Address Tracker
       </HeaderTitle>
-      <HeaderForm>
+      <HeaderForm onSubmit={(e) => e.preventDefault()}>
         <Input />
         <FormButton>
-          <ArrowForwardIosIcon />
+          <IoIosArrowForward />
         </FormButton>
       </HeaderForm>
     </HeaderWrapper>
@@ -37,7 +37,7 @@ const Input = styled.input.attrs(props => ({
   border: none ;
   border-top-left-radius: 12px ;
   border-bottom-left-radius: 12px ;
-  padding: 15px ;
+  padding: 15px 20px ;
   flex-grow: 1 ;
   font-weight: 500 ;
   color: black ;
@@ -54,14 +54,29 @@ const FormButton = styled.button`
   display: flex ;
   align-items: center ;
   justify-content: center ;
+  padding: 0 20px ;
+  transition: .3s ease ;
+  & > svg {
+    font-size: 1.2rem ;
+  }
+  &:hover {
+    background-color: #3A3A3A ;
+  }
 `
 
 const HeaderForm = styled.form`
   display: flex ;
-  margin: 20px auto ;
+  margin: 25px auto ;
   width: 50vw ;
-  max-width: 500px ;
+  max-width: 550px ;
   min-width: 400px ;
+  @media (max-width: 400px) {
+    min-width: 0 ;
+    width: 90vw ;
+    & > input {
+      min-width: 0 ;
+    }
+  }
 `
 
 const HeaderWrapper = styled.header`
