@@ -5,6 +5,10 @@
   display: grid ;
   grid-template-columns: repeat(4 , 25%) ;
   grid-template-rows: auto ;
+  position: absolute;
+  top: 400px ;
+  transform: translateY(-50%) ;
+  height: 200px ;
 }
 
 
