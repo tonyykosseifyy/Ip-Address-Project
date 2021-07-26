@@ -4,12 +4,27 @@ import styled from 'styled-components' ;
 import logo from './pattern-bg.png' ;
 import { IoIosArrowForward } from 'react-icons/io';
 import { RiErrorWarningFill } from 'react-icons/ri' ;
+import Tooltip from '@material-ui/core/Tooltip' ;
+import Zoom from '@material-ui/core/Zoom' ;
+import axios from 'axios' ;
 
+const BASE_URL = 'https://geo.ipify.org/api/v1';
+const API_KEY = 'at_IfRMIjWI00Zo31GJ9dOZIrTRuaT74' ;
 
-const Header = () => {
+const Header = ({ setData }) => {
   const [ ip , setIp ] = useState('') ;
   const [ error , setError ] = useState(false) ;
   const [ submit , setSubmit ] = useState(false) ;
+  const fetchData = async ( ip ) => {
+    try {
+      const response = await axios.get(`${BASE_URL}?apiKey=${API_KEY}${ip ? `&ipAddress=${ip}` : ''}`)
+      setIp(response.data.ip) ;
+      setData(response.data) ;
+      console.log(response.data)
+    } catch(error) {
+      console.log(error)
+    }
+  }
   const testIp = () => {
     if ( /^([0-9]{1,3}\.){3}[0-9]{1,3}$/.test(ip) ) {
       setError(false) ;
@@ -19,13 +34,15 @@ const Header = () => {
   }
   const handleSubmit = (e) => {
     e.preventDefault() ;
-    setSubmit(true) ;
+    !error && fetchData(ip)
   }
   useEffect(() => {
-    if( submit ) {
-      testIp() ;
-    }
-  },[ip, submit])
+    testIp() ;
+  },[ip])
+  
+  useEffect(() => {
+    fetchData() ;
+  },[])
   console.log(error , ip ) ;
   return (
     <HeaderWrapper className='header' >
@@ -34,9 +51,17 @@ const Header = () => {
       </HeaderTitle>
       <HeaderForm onSubmit={(e) => handleSubmit(e)} >
         <Input value={ip} onChange={(e) => setIp(e.target.value)} />
-        <div className={`input-svg-container ${error ? 'input-svg-container-error' : ''}`} >
-          <RiErrorWarningFill />
-        </div>
+        <Tooltip
+          TransitionComponent={Zoom}
+          placement='top'
+          title='IP Address not valid !'
+          arrow
+          style={{display: error ? '' : 'none'}}
+          >
+          <div className={`input-svg-container ${error ? 'input-svg-container-error' : ''}`} >
+            <RiErrorWarningFill />
+          </div>
+        </Tooltip>
         <FormButton>
           <IoIosArrowForward />
         </FormButton>

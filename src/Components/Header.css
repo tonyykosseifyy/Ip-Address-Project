@@ -11,6 +11,7 @@
   justify-content: center ;
   background-color: white ;
   padding-right: 10px;
+  cursor: pointer;
 }
 
 
@@ -25,4 +26,12 @@
 .input-svg-container-error > svg {
   opacity: 1 ;
   transform: scale(1) ;
+}
+
+.header .MuiTooltip-popper {
+  background-color: #C34034 ;
+  color: white ;
+  padding: 10px ;
+  font-size: 1.05rem ;
+  font-weight: 500 ; 
 }

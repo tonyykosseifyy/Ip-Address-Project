@@ -5,7 +5,10 @@
   font-family: 'Rubik', sans-serif;
 }
 
-
+.app {
+  height: 100vh ;
+  background-color: #252934 ;
+}
 
 
 html {
