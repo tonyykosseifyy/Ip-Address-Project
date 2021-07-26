@@ -3,10 +3,14 @@ import './Header.css' ;
 import styled from 'styled-components' ;
 import logo from './pattern-bg.png' ;
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import Info from './Info' ;
+
+
 
 const Header = () => {
   return (
     <HeaderWrapper className='header' >
+      <Info />
       <HeaderTitle>
         IP Address Tracker
       </HeaderTitle>

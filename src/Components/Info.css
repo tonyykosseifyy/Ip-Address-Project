@@ -1,0 +1,17 @@
+.info {
+  background-color: white ;
+  border-radius: 12px ;
+  box-shadow: 2px 2px 10px gray ;
+  display: grid ;
+  grid-template-columns: repeat(4 , 25%) ;
+  grid-template-rows: auto ;
+}
+
+
+
+@media screen and (max-width: 600px ) {
+  .info {
+    grid-template-columns: 1fr ;
+    grid-template-rows: repeat(4 , 25% ) ;
+  }
+}
