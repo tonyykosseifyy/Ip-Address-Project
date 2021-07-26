@@ -1,19 +1,42 @@
-import React from 'react' ;
+import React, { useState , useEffect } from 'react' ;
 import './Header.css' ;
 import styled from 'styled-components' ;
 import logo from './pattern-bg.png' ;
 import { IoIosArrowForward } from 'react-icons/io';
-
+import { RiErrorWarningFill } from 'react-icons/ri' ;
 
 
 const Header = () => {
+  const [ ip , setIp ] = useState('') ;
+  const [ error , setError ] = useState(false) ;
+  const [ submit , setSubmit ] = useState(false) ;
+  const testIp = () => {
+    if ( /^([0-9]{1,3}\.){3}[0-9]{1,3}$/.test(ip) ) {
+      setError(false) ;
+    } else {
+      setError(true) ;
+    }
+  }
+  const handleSubmit = (e) => {
+    e.preventDefault() ;
+    setSubmit(true) ;
+  }
+  useEffect(() => {
+    if( submit ) {
+      testIp() ;
+    }
+  },[ip, submit])
+  console.log(error , ip ) ;
   return (
     <HeaderWrapper className='header' >
       <HeaderTitle>
         IP Address Tracker
       </HeaderTitle>
-      <HeaderForm onSubmit={(e) => e.preventDefault()}>
-        <Input />
+      <HeaderForm onSubmit={(e) => handleSubmit(e)} >
+        <Input value={ip} onChange={(e) => setIp(e.target.value)} />
+        <div className={`input-svg-container ${error ? 'input-svg-container-error' : ''}`} >
+          <RiErrorWarningFill />
+        </div>
         <FormButton>
           <IoIosArrowForward />
         </FormButton>
@@ -40,6 +63,7 @@ const Input = styled.input.attrs(props => ({
   font-weight: 500 ;
   color: black ;
   font-size: 1.05rem ;
+  transition: .3s ease ;
 `
 const FormButton = styled.button`
   background-color: #000000 ;
@@ -68,6 +92,8 @@ const HeaderForm = styled.form`
   width: 50vw ;
   max-width: 550px ;
   min-width: 400px ;
+  transition: .3s ease ;
+  border-radius: 12px ;
   @media (max-width: 400px) {
     min-width: 0 ;
     width: 90vw ;
