@@ -39,7 +39,7 @@ const Header = ({ setData }) => {
   useEffect(() => {
     testIp() ;
   },[ip])
-  
+
   useEffect(() => {
     fetchData() ;
   },[])
@@ -58,7 +58,7 @@ const Header = ({ setData }) => {
           arrow
           style={{display: error ? '' : 'none'}}
           >
-          <div className={`input-svg-container ${error ? 'input-svg-container-error' : ''}`} >
+          <div className={`input-svg-container ${error && (ip !=='') ? 'input-svg-container-error' : ''}`} >
             <RiErrorWarningFill />
           </div>
         </Tooltip>
