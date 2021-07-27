@@ -5,12 +5,14 @@
   font-family: 'Rubik', sans-serif;
 }
 
+.app .leaflet-container.leaflet-touch-drag.leaflet-touch-zoom {
+  height: calc(100vh - 200px ) ;
+}
+
 .app {
   height: 100vh ;
   background-color: #252934 ;
 }
-
-#mapid { height: 180px; }
 
 html {
   font-size: 17px ;

@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import "./App.css";
 import Header from './Components/Header' ;
 import Info from './Components/Info' ;
+import Body from './Components/Body'
 
 const App = () => {
   const [ data , setData ] = useState({}) ;
-  const [ a , setA ] = useState({})
+  const [ a , setA ] = useState({}) ;
+  const [ load , setLoad ] = useState(false) ;
   if(navigator.geolocation) {
     navigator.geolocation.getCurrentPosition((position) => {
       setA ({
@@ -14,11 +16,13 @@ const App = () => {
       })
     }) ;
   }
-  console.log('dataaa',a)
+  console.log('app data' , data)
   return (
     <div className='app'>
-      <Header setData={setData} />
+      <Header setData={setData} setLoad={setLoad} />
       <Info />
+      <div id='mapid'></div>
+      <Body data={data} />
     </div>
   );
 }

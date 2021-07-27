@@ -11,18 +11,18 @@ import axios from 'axios' ;
 const BASE_URL = 'https://geo.ipify.org/api/v1';
 const API_KEY = 'at_IfRMIjWI00Zo31GJ9dOZIrTRuaT74' ;
 
-const Header = ({ setData }) => {
+const Header = ({ setData , setLoad }) => {
   const [ ip , setIp ] = useState('') ;
   const [ error , setError ] = useState(false) ;
-  const [ submit , setSubmit ] = useState(false) ;
   const fetchData = async ( ip ) => {
     try {
       const response = await axios.get(`${BASE_URL}?apiKey=${API_KEY}${ip ? `&ipAddress=${ip}` : ''}`)
-      setIp(response.data.ip) ;
-      setData(response.data) ;
-      console.log(response.data)
+      !ip && setIp(response.data.ip) ;
+      setLoad(prev => !prev) ;
+      setData(response.data.location) ;
+      console.log('header dataa: ',response.data) ;
     } catch(error) {
-      console.log(error)
+      alert('No such Ip Address !')
     }
   }
   const testIp = () => {
@@ -43,7 +43,6 @@ const Header = ({ setData }) => {
   useEffect(() => {
     fetchData() ;
   },[])
-  console.log(error , ip ) ;
   return (
     <HeaderWrapper className='header' >
       <HeaderTitle>
@@ -142,4 +141,7 @@ const HeaderTitle = styled.h1`
   margin-bottom: 10px ;
   text-align: center ;
   font-size: 2rem ;
+`
+ ;
+`
 `
