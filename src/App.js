@@ -6,22 +6,12 @@ import Body from './Components/Body'
 
 const App = () => {
   const [ data , setData ] = useState({}) ;
-  const [ a , setA ] = useState({}) ;
   const [ load , setLoad ] = useState(false) ;
-  if(navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition((position) => {
-      setA ({
-        lat: position.coords.latitude,
-        long: position.coords.longitude
-      })
-    }) ;
-  }
-  console.log('app data' , data)
+
   return (
     <div className='app'>
       <Header setData={setData} setLoad={setLoad} />
-      <Info />
-      <div id='mapid'></div>
+      <Info data={data} />
       <Body data={data} />
     </div>
   );

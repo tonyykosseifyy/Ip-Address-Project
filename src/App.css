@@ -8,10 +8,21 @@
 .app .leaflet-container.leaflet-touch-drag.leaflet-touch-zoom {
   height: calc(100vh - 200px ) ;
 }
+.app .MuiAlert-filledError {
+  min-width: 350px ;
+}
 
 .app {
   height: 100vh ;
   background-color: #252934 ;
+}
+.app .header .MuiButton-root {
+  padding: 6px;
+  font-size: 15px;
+}
+
+.app .header .MuiIconButton-root {
+  padding: 6px ;
 }
 
 html {

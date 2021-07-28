@@ -7,22 +7,55 @@ import { RiErrorWarningFill } from 'react-icons/ri' ;
 import Tooltip from '@material-ui/core/Tooltip' ;
 import Zoom from '@material-ui/core/Zoom' ;
 import axios from 'axios' ;
+import Snackbar from '@material-ui/core/Snackbar';
+import MuiAlert from '@material-ui/lab/Alert';
+import Grow from '@material-ui/core/Grow';
+import Button from '@material-ui/core/Button';
+import CloseIcon from '@material-ui/icons/Close';
+import IconButton from '@material-ui/core/IconButton';
 
 const BASE_URL = 'https://geo.ipify.org/api/v1';
 const API_KEY = 'at_IfRMIjWI00Zo31GJ9dOZIrTRuaT74' ;
 
 const Header = ({ setData , setLoad }) => {
   const [ ip , setIp ] = useState('') ;
+  const [ prevIp , setPrevIp ] = useState('') ;
   const [ error , setError ] = useState(false) ;
+  const [open, setOpen] = useState(false);
+  const [ errorMessage , setErrorMessage ] = useState('') ;
+  const handleClick = () => {
+    setOpen(true);
+  };
+  const handleClear = () => {
+    setIp('') ;
+    setPrevIp('') ;
+  }
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      setOpen(false);
+    }
+    setOpen(false);
+  };
   const fetchData = async ( ip ) => {
     try {
-      const response = await axios.get(`${BASE_URL}?apiKey=${API_KEY}${ip ? `&ipAddress=${ip}` : ''}`)
-      !ip && setIp(response.data.ip) ;
-      setLoad(prev => !prev) ;
-      setData(response.data.location) ;
-      console.log('header dataa: ',response.data) ;
+      if ( (ip !== prevIp) || prevIp === '' ) {
+        const response = await axios.get(`${BASE_URL}?apiKey=${API_KEY}${ip ? `&ipAddress=${ip}` : ''}`)
+        !ip && setIp(response.data.ip) ;
+        setPrevIp(response.data.ip) ;
+        const regx = new RegExp('Private-Use') ;
+        if( !regx.test(response.data.isp) ) {
+          setLoad(prev => !prev) ;
+          setData(response.data.location) ;
+          console.log('header dataa: ',response.data) ;
+          setOpen(false) ;
+        } else {
+          setErrorMessage('This is a Private Ip Address ! ') ;
+          setOpen(true) ;
+        }
+      }
     } catch(error) {
-      alert('No such Ip Address !')
+      setErrorMessage('No such Ip Address !') ;
+      setOpen(true) ;
     }
   }
   const testIp = () => {
@@ -65,6 +98,24 @@ const Header = ({ setData , setLoad }) => {
           <IoIosArrowForward />
         </FormButton>
       </HeaderForm>
+
+
+      <Snackbar TransitionComponent={Grow} open={open} autoHideDuration={6000} onClose={handleClose} anchorOrigin={{ vertical: 'top', horizontal: 'center' }}>
+        <MuiAlert action={
+          <div style={{display: 'flex'}}>
+            <Button color="inherit" size="small" variant='filled' onClick={() => handleClear()}>Clear</Button>
+              <IconButton aria-label="close" color="inherit" size="medium" onClick={() => setOpen(false) } >
+                <CloseIcon fontSize="inherit"  />
+              </IconButton>
+          </div>}
+          onClose={handleClose}
+          severity="error"
+          elevation={6}
+          variant="filled"
+          >
+            { errorMessage }
+        </MuiAlert>
+      </Snackbar>
     </HeaderWrapper>
   ) ;
 } ;
@@ -141,7 +192,4 @@ const HeaderTitle = styled.h1`
   margin-bottom: 10px ;
   text-align: center ;
   font-size: 2rem ;
-`
- ;
-`
 `
