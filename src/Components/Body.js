@@ -10,26 +10,29 @@ const Body = ({ data }) => {
   useEffect(() => {
     if (map) {
       const lastCenter = map.options.center ;
-      if ((lastCenter[0] !== data.lat) || (lastCenter[1] !== data.lng) ) {
-        map.flyTo([data.lat , data.lng ], map.getZoom())
+      if ((lastCenter[0] !== data.location.lat) || (lastCenter[1] !== data.location.lng) ) {
+        map.flyTo([data.location.lat , data.location.lng ], map.getZoom())
       }
     }
   },[ data ])
-  return (
-    <div className='body'>
-      <MapContainer whenCreated={setMap} center={data.hasOwnProperty('lat') ? [data.lat , data.lng] : position} zoom={13} scrollWheelZoom={true}>
-        <TileLayer
-          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        <Marker position={data.hasOwnProperty('lat') ? [data.lat , data.lng] : position}>
-          <Popup>
-            {data.country} ,{data.city}<br /> {data.region}
-          </Popup>
-        </Marker>
-      </MapContainer>
-    </div>
-  ) ;
+  if ( data.location ) {
+    return (
+      <div className='body'>
+        <MapContainer whenCreated={setMap} center={data.location ? [data.location.lat , data.location.lng] : position} zoom={13} scrollWheelZoom={true}>
+          <TileLayer
+            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+        <Marker position={data.location ? [data.location.lat , data.location.lng] : position}>
+            <Popup>
+              {data.location.country} ,{data.location.region}<br /> {data.location.city}
+            </Popup>
+          </Marker>
+        </MapContainer>
+      </div>
+    ) ;
+  } else return null
+
 } ;
 
 

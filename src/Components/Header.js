@@ -13,6 +13,8 @@ import Grow from '@material-ui/core/Grow';
 import Button from '@material-ui/core/Button';
 import CloseIcon from '@material-ui/icons/Close';
 import IconButton from '@material-ui/core/IconButton';
+import CircularProgress from '@material-ui/core/CircularProgress' ;
+
 
 const BASE_URL = 'https://geo.ipify.org/api/v1';
 const API_KEY = 'at_IfRMIjWI00Zo31GJ9dOZIrTRuaT74' ;
@@ -23,6 +25,7 @@ const Header = ({ setData , setLoad }) => {
   const [ error , setError ] = useState(false) ;
   const [open, setOpen] = useState(false);
   const [ errorMessage , setErrorMessage ] = useState('') ;
+  const [ loading , setLoading ] = useState(true) ;
   const handleClick = () => {
     setOpen(true);
   };
@@ -39,13 +42,15 @@ const Header = ({ setData , setLoad }) => {
   const fetchData = async ( ip ) => {
     try {
       if ( (ip !== prevIp) || prevIp === '' ) {
+        setLoading(true)
         const response = await axios.get(`${BASE_URL}?apiKey=${API_KEY}${ip ? `&ipAddress=${ip}` : ''}`)
         !ip && setIp(response.data.ip) ;
         setPrevIp(response.data.ip) ;
+        setLoading(false) ;
         const regx = new RegExp('Private-Use') ;
         if( !regx.test(response.data.isp) ) {
           setLoad(prev => !prev) ;
-          setData(response.data.location) ;
+          setData(response.data) ;
           console.log('header dataa: ',response.data) ;
           setOpen(false) ;
         } else {
@@ -56,6 +61,7 @@ const Header = ({ setData , setLoad }) => {
     } catch(error) {
       setErrorMessage('No such Ip Address !') ;
       setOpen(true) ;
+      setLoading(false) ;
     }
   }
   const testIp = () => {
@@ -76,6 +82,7 @@ const Header = ({ setData , setLoad }) => {
   useEffect(() => {
     fetchData() ;
   },[])
+  console.log('loading' , loading )
   return (
     <HeaderWrapper className='header' >
       <HeaderTitle>
@@ -94,6 +101,9 @@ const Header = ({ setData , setLoad }) => {
             <RiErrorWarningFill />
           </div>
         </Tooltip>
+        <div className='loading-input'>
+          <CircularProgress size={23} thickness={5.3} style={{display: loading ? "": "none"}} />
+        </div>
         <FormButton>
           <IoIosArrowForward />
         </FormButton>
@@ -181,7 +191,7 @@ const HeaderForm = styled.form`
 const HeaderWrapper = styled.header`
   background-image: url(${logo}) ;
   background-repeat: no-repeat ;
-  height: 200px ;
+  height: 250px ;
   background-size: cover ;
   background-position: center ;
   padding-top: 30px ;
