@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Ip-Address-Project/static/css/main.5c68b39e.chunk.css",
+    "main.js": "/Ip-Address-Project/static/js/main.c68cd763.chunk.js",
+    "main.js.map": "/Ip-Address-Project/static/js/main.c68cd763.chunk.js.map",
+    "runtime-main.js": "/Ip-Address-Project/static/js/runtime-main.d133ce16.js",
+    "runtime-main.js.map": "/Ip-Address-Project/static/js/runtime-main.d133ce16.js.map",
+    "static/js/2.482b2597.chunk.js": "/Ip-Address-Project/static/js/2.482b2597.chunk.js",
+    "static/js/2.482b2597.chunk.js.map": "/Ip-Address-Project/static/js/2.482b2597.chunk.js.map",
+    "index.html": "/Ip-Address-Project/index.html",
+    "static/css/main.5c68b39e.chunk.css.map": "/Ip-Address-Project/static/css/main.5c68b39e.chunk.css.map",
+    "static/js/2.482b2597.chunk.js.LICENSE.txt": "/Ip-Address-Project/static/js/2.482b2597.chunk.js.LICENSE.txt",
+    "static/media/pattern-bg.a60a3c85.png": "/Ip-Address-Project/static/media/pattern-bg.a60a3c85.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d133ce16.js",
+    "static/js/2.482b2597.chunk.js",
+    "static/css/main.5c68b39e.chunk.css",
+    "static/js/main.c68cd763.chunk.js"
+  ]
+}
