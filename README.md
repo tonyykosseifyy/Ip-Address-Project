@@ -9,6 +9,17 @@ Check out the live demo of the `Ip address tracker` website here: [Live Website]
 The IP Address Tracker is a dynamic application designed to locate and display information about IP addresses. Built using React and integrated with external APIs, it offers real-time IP tracking capabilities.
 
 
+
+
+
+<img width="1440" alt="Screenshot 2024-01-09 at 6 45 04 PM" src="https://github.com/tonyykosseifyy/Ip-Address-Project/assets/68602228/cea7f00d-b58b-4c97-b79b-c26ee5271a9e">
+
+- The main feature of the website, allowing users to track and display information about specific IP addresses.
+- Provides details such as location, timezone, and ISP of the entered IP address.
+- An integrated map displays the geographical location of the tracked IP address.
+- Users can interact with the map for a more detailed view.
+
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
@@ -44,17 +55,6 @@ npm start
 ```
 
 This runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-
-### Main 
-
-<img width="1440" alt="Screenshot 2024-01-09 at 6 45 04 PM" src="https://github.com/tonyykosseifyy/Ip-Address-Project/assets/68602228/cea7f00d-b58b-4c97-b79b-c26ee5271a9e">
-
-- The main feature of the website, allowing users to track and display information about specific IP addresses.
-- Provides details such as location, timezone, and ISP of the entered IP address.
-- An integrated map displays the geographical location of the tracked IP address.
-- Users can interact with the map for a more detailed view.
-
 
 
 ## Built With
