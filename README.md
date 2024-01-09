@@ -1,8 +1,8 @@
-# Portfolio Website
+# Bank Website
 
 ## Live Demo
 
-Check out the live demo of my portfolio website here: [Live Website](https://easy-bank-a54d3.web.app/)
+Check out the live demo of the easy-bank website here: [Live Website](https://easy-bank-a54d3.web.app/)
 
 ## Overview
 
@@ -14,7 +14,6 @@ The Easy Bank website is a challenge project from Frontend Masters. This project
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites 
-
 
 Before running this project, you need to have Node.js and npm (Node Package Manager) installed on your computer. You can download them from [Node.js website](https://nodejs.org/).
 
@@ -46,38 +45,34 @@ npm start
 
 This runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## Pages
 
-### Home
+### Landing 
 
-<img width="1431" alt="Screenshot 2024-01-09 at 3 18 22 PM (1)" src="https://github.com/tonyykosseifyy/react-portfolio/assets/68602228/be267b7e-63b6-440f-a9e3-1b88a13b0cc1">
+<img width="1440" alt="Screenshot 2024-01-09 at 6 52 31 PM" src="https://github.com/tonyykosseifyy/Ip-Address-Project/assets/68602228/1de757d6-3e67-4d84-ae6e-2710c3f52d4f">
+
+- This is the first section of the bank website.
+- It features brief introduction about easy-bank.
+
+### About us 
+
+<img width="1440" alt="Screenshot 2024-01-09 at 6 58 26 PM" src="https://github.com/tonyykosseifyy/Ip-Address-Project/assets/68602228/ab432fde-6184-4de4-a7d7-91046bb852b8">
+
+- This page provides a detailed overview of easy-bank services.
+- It provides detailed explanations of how EasyBank enhances financial management
 
 
-- This is the landing page of the portfolio.
-- It features a welcoming message and a brief introduction.
+### Articles
+<img width="1440" alt="Screenshot 2024-01-09 at 7 09 12 PM" src="https://github.com/tonyykosseifyy/Ip-Address-Project/assets/68602228/b5bb7333-2119-4aaf-b2fb-e0e776ad59a3">
 
-### About Me
+- Here, you can find easybank articles.
+- Readers can find the latest updates on EasyBank, including information about new services.
 
-<img src="https://github.com/tonyykosseifyy/react-portfolio/assets/68602228/7f7ba7e8-10ca-4f70-9eb5-06e8b6deedfa" alt="Screenshot 2024-01-09 at 4 57 01 PM" width="49%" /> <img src="https://github.com/tonyykosseifyy/react-portfolio/assets/68602228/0c0dfe57-db14-4c8d-90f9-7dd4ca6b04f5" alt="Screenshot 2024-01-09 at 4 57 10 PM" width="50%" />
+### Footer
 
+<img width="1440" alt="Screenshot 2024-01-09 at 7 17 22 PM" src="https://github.com/tonyykosseifyy/Ip-Address-Project/assets/68602228/d8d30803-88b3-4257-ae83-0b3ce3be2262">
 
-- This page provides a detailed overview of my professional background,
- skills and technologies I use.
-- It includes my technical skillset, and any other relevant information.
-
-### Projects
-
-<img width="1440" alt="Screenshot 2024-01-09 at 6 03 15 PM (1)" src="https://github.com/tonyykosseifyy/react-portfolio/assets/68602228/d03e5626-cf37-49ad-8293-b9dfb14c136f">
-
-- Here, you can find a showcase of my work.
-- Each project is presented with a 2 links one for the live site (if applicable) and the other for the source code.
-
-### Contact Us
-
-<img width="1439" alt="Screenshot 2024-01-09 at 6 07 21 PM" src="https://github.com/tonyykosseifyy/react-portfolio/assets/68602228/5ce708d7-3167-496d-9be2-86534bcd1857">
-
-- This page allows visitors to reach out to me.
-- It includes a contact form as well as my professional contact details and links to my social media profiles.
+- This page allows visitors to reach out to easybank.
+- It includes a links as well as contact details and links to easybank social media profiles.
 
 
 ## Built With
