@@ -1,12 +1,12 @@
-# Bank Website
+# Ip Address Tracker Website
 
 ## Live Demo
 
-Check out the live demo of the easy-bank website here: [Live Website](https://easy-bank-a54d3.web.app/)
+Check out the live demo of the `Ip address tracker` website here: [Live Website](https://ip-address-project-85ce4.web.app/)
 
 ## Overview
 
-The Easy Bank website is a challenge project from Frontend Masters. This project is a modern, responsive banking application built using React and various other technologies.
+The IP Address Tracker is a dynamic application designed to locate and display information about IP addresses. Built using React and integrated with external APIs, it offers real-time IP tracking capabilities.
 
 
 ## Getting Started
@@ -48,31 +48,10 @@ This runs the app in the development mode. Open [http://localhost:3000](http://l
 
 ### Landing 
 
-<img width="1440" alt="Screenshot 2024-01-09 at 6 52 31 PM" src="https://github.com/tonyykosseifyy/Ip-Address-Project/assets/68602228/1de757d6-3e67-4d84-ae6e-2710c3f52d4f">
-
+<img width="1440" alt="Screenshot 2024-01-09 at 6 45 04 PM" src="https://github.com/tonyykosseifyy/Ip-Address-Project/assets/68602228/cea7f00d-b58b-4c97-b79b-c26ee5271a9e">
 - This is the first section of the bank website.
 - It features brief introduction about easy-bank.
 
-### About us 
-
-<img width="1440" alt="Screenshot 2024-01-09 at 6 58 26 PM" src="https://github.com/tonyykosseifyy/Ip-Address-Project/assets/68602228/ab432fde-6184-4de4-a7d7-91046bb852b8">
-
-- This page provides a detailed overview of easy-bank services.
-- It provides detailed explanations of how EasyBank enhances financial management
-
-
-### Articles
-<img width="1440" alt="Screenshot 2024-01-09 at 7 09 12 PM" src="https://github.com/tonyykosseifyy/Ip-Address-Project/assets/68602228/b5bb7333-2119-4aaf-b2fb-e0e776ad59a3">
-
-- Here, you can find easybank articles.
-- Readers can find the latest updates on EasyBank, including information about new services.
-
-### Footer
-
-<img width="1440" alt="Screenshot 2024-01-09 at 7 17 22 PM" src="https://github.com/tonyykosseifyy/Ip-Address-Project/assets/68602228/d8d30803-88b3-4257-ae83-0b3ce3be2262">
-
-- This page allows visitors to reach out to easybank.
-- It includes a links as well as contact details and links to easybank social media profiles.
 
 
 ## Built With
@@ -80,9 +59,17 @@ This runs the app in the development mode. Open [http://localhost:3000](http://l
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
 ![Material UI](https://img.shields.io/badge/Material--UI-0081CB.svg?style=for-the-badge&logo=material-ui&logoColor=white)
+![Material-UI Icons](https://img.shields.io/badge/Material_UI_Icons-%230081CB.svg?style=for-the-badge&logo=material-ui&logoColor=white)
+![Material-UI Lab](https://img.shields.io/badge/Material_UI_Lab-%230081CB.svg?style=for-the-badge&logo=material-ui&logoColor=white)
+![Axios](https://img.shields.io/badge/Axios-%231572B6.svg?style=for-the-badge&logo=axios&logoColor=white)
+![Leaflet](https://img.shields.io/badge/Leaflet-%231EBF00.svg?style=for-the-badge&logo=leaflet&logoColor=white)
+![React](https://img.shields.io/badge/React-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![React DOM](https://img.shields.io/badge/React_DOM-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![React Icons](https://img.shields.io/badge/React_Icons-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![React Leaflet](https://img.shields.io/badge/React_Leaflet-%2320232a.svg?style=for-the-badge&logo=react-leaflet&logoColor=white)
+![Styled Components](https://img.shields.io/badge/Styled_Components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
 
 
 ## Contact
