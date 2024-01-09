@@ -46,11 +46,14 @@ npm start
 This runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 
-### Landing 
+### Main 
 
 <img width="1440" alt="Screenshot 2024-01-09 at 6 45 04 PM" src="https://github.com/tonyykosseifyy/Ip-Address-Project/assets/68602228/cea7f00d-b58b-4c97-b79b-c26ee5271a9e">
-- This is the first section of the bank website.
-- It features brief introduction about easy-bank.
+
+- The main feature of the website, allowing users to track and display information about specific IP addresses.
+- Provides details such as location, timezone, and ISP of the entered IP address.
+- An integrated map displays the geographical location of the tracked IP address.
+- Users can interact with the map for a more detailed view.
 
 
 
