@@ -61,15 +61,10 @@ This runs the app in the development mode. Open [http://localhost:3000](http://l
 ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
 ![Material UI](https://img.shields.io/badge/Material--UI-0081CB.svg?style=for-the-badge&logo=material-ui&logoColor=white)
-![Material-UI Icons](https://img.shields.io/badge/Material_UI_Icons-%230081CB.svg?style=for-the-badge&logo=material-ui&logoColor=white)
-![Material-UI Lab](https://img.shields.io/badge/Material_UI_Lab-%230081CB.svg?style=for-the-badge&logo=material-ui&logoColor=white)
 ![Axios](https://img.shields.io/badge/Axios-%231572B6.svg?style=for-the-badge&logo=axios&logoColor=white)
 ![Leaflet](https://img.shields.io/badge/Leaflet-%231EBF00.svg?style=for-the-badge&logo=leaflet&logoColor=white)
 ![React](https://img.shields.io/badge/React-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![React DOM](https://img.shields.io/badge/React_DOM-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![React Icons](https://img.shields.io/badge/React_Icons-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![React Leaflet](https://img.shields.io/badge/React_Leaflet-%2320232a.svg?style=for-the-badge&logo=react-leaflet&logoColor=white)
-![Styled Components](https://img.shields.io/badge/Styled_Components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
 
 
 ## Contact
